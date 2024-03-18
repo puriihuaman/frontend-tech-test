@@ -1,0 +1,46 @@
+:root {
+	--type-scroll: auto;
+}
+
+html,
+body {
+	font-family: var(--main-font);
+	line-height: var(--lineHeights-base);
+
+	background-color: var(--colors-gray-50);
+	color: var(--colors-gray-800);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	transition: var(--transition-property-common),
+		var(--transition-duration-300) var(--transition-easing-ease-in-out);
+
+	background: linear-gradient(
+		to top,
+
+		var(--colors-gray-50),
+		var(--colors-gray-100)
+	);
+}
+
+body {
+	min-height: 100vh;
+	max-width: var(--breakpoint-xl, 1280px);
+	margin: 0 auto;
+	padding: 0 var(--space-4);
+	overflow: var(--type-scroll);
+	overflow-x: hidden;
+}
+
+button {
+	border: 2px solid transparent;
+	padding: var(--space-3) var(--space-5);
+	background-color: transparent;
+	color: inherit;
+	font-size: var(--fontSizes-md);
+	font-weight: normal;
+	font-family: inherit;
+	cursor: pointer;
+	transition: var(--transition-property-common),
+		var(--transition-easing-ease-in-out), var(--transition-duration-300);
+}
