@@ -44,3 +44,6 @@ button {
 	transition: var(--transition-property-common),
 		var(--transition-easing-ease-in-out), var(--transition-duration-300);
 }
+#app {
+	overflow: hidden;
+}

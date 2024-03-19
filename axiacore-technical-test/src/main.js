@@ -208,6 +208,8 @@ DOC.addEventListener('DOMContentLoaded', () => {
 	});
 
 	btnClear.addEventListener('click', () => {
+		numberOfFilters = 0;
+		filterAmount.textContent = numberOfFilters;
 		checkList.forEach((check) => (check.checked = false));
 	});
 
@@ -217,7 +219,7 @@ DOC.addEventListener('DOMContentLoaded', () => {
 	});
 
 	showMenu();
-	showCartModal(cartList);
+	showCartModal();
 });
 
 const replaceSpace = (text) => {
@@ -279,12 +281,11 @@ const updateCart = (cartList) => {
 	cartModalTotal.textContent = formatMoney(totalToPay);
 };
 
-const showCartModal = (cartList) => {
+const showCartModal = () => {
 	const cartModal = DOC.getElementById('cart-modal');
 	const btnCart = DOC.getElementById('cart');
 
 	btnCart.addEventListener('click', () => {
-		console.log('clic');
 		if (cartModal.classList.contains('open'))
 			cartModal.classList.remove('open');
 		else cartModal.classList.add('open');
